@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ishtiaq Uddin - Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Condensed&display=swap"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+      }
+
+      
+      h1,
+      h2 {
+        font-family: "Roboto Condensed", sans-serif;
+        font-style: italic;
+      }
+
+      .carousel img {
+        width: 100%;
+        height: auto;
+      }
+      nav ul li a.active {
+        color: #ffffff;
+        border-bottom: 2px solid #ffffff;
+      }
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .tooltip {
+        display: inline-block;
+        position: absolute;
+        white-space: nowrap;
+      }
+
+      .tooltip-right {
+        top: 50%;
+        left: calc(100% + 0.5rem);
+        transform: translateY(-50%);
+      }
+
+      .social-link:hover .tooltip {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <!-- Header Section -->
+    <header
+      class="fixed px-24 z-10 bg-opacity-30 shadow fixed w-full top-0 bg-black text-white"
+    >
+      <div class="mx-auto px-4 flex justify-between items-center">
+        <div class="flex justify-center items-center">
+          <img
+            class="w-[90px] h-[90px] p-4 rounded-full"
+            src="images/myprofile.jpg"
+            alt=""
+          />
+          <h1 class="text-xl font-bold">ISHTIAQ UDDIN</h1>
+        </div>
+        <nav>
+          <ul class="flex space-x-6">
+            <li><a href="#home" class="text-gray-300 active">Home</a></li>
+            <li><a href="#about" class="text-gray-300 active">About</a></li>
+            <li>
+              <a href="#projects" class="text-gray-300 active">Projects</a>
+            </li>
+            <li>
+              <a href="#contact" class="text-gray-300 acttive">Contact</a>
+            </li>
+            <li>
+              <a
+                href="path/to/cv.pdf"
+                download
+                class="bg-purple-600 text-white px-4 py-2 rounded-xl hover:bg-purple-700"
+                >Download CV</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="text-center py-16 bg-gray-900 relative">
+      <div
+        class="container mx-auto min-h-screen flex flex-col md:flex-row items-center"
+      >
+        <div class="md:absolute md:left-0 md:ml-8 mb-8 md:mb-0">
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="https://codeforces.com/profile/yourprofile"
+                class="social-link inline-block relative"
+              >
+                <i class="fab fa-codepen text-2xl"></i>
+                <span
+                  class="tooltip tooltip-right absolute top-1/2 ml-2 transform -translate-y-1/2 opacity-0 bg-gray-300 ml-4 p-2 text-purple-600 rounded transition duration-300 ease-in-out"
+                >
+                  <i class="fab fa-codepen mr-2"></i> Codeforces
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.codechef.com/users/yourprofile"
+                class="social-link inline-block relative"
+              >
+                <i class="fas fa-code text-2xl"></i>
+                <span
+                  class="tooltip tooltip-right absolute top-1/2 ml-2 transform -translate-y-1/2 opacity-0 bg-gray-300 p-2 text-purple-600 rounded transition duration-300 ease-in-out"
+                >
+                  <i class="fas fa-code mr-2"></i> CodeChef
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://leetcode.com/yourprofile"
+                class="social-link inline-block relative"
+              >
+                <i class="fas fa-code-branch text-2xl"></i>
+
+                <span
+                  class="tooltip tooltip-right absolute top-1/2 ml-2 transform -translate-y-1/2 opacity-0 bg-gray-300 p-2 text-purple-600 rounded transition duration-300 ease-in-out"
+                >
+                  <i class="fas fa-code-branch mr-2"></i> LeetCode
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/yourprofile"
+                class="social-link inline-block relative"
+              >
+                <i class="fab fa-github text-2xl"></i>
+
+                <span
+                  class="tooltip tooltip-right absolute top-1/2 transform -translate-y-1/2 opacity-0 bg-gray-300 py-2 px-4 ml-2 text-purple-600 rounded transition duration-300 ease-in-out"
+                >
+                  <i class="fab fa-github mr-2"></i> Github
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/yourprofile"
+                class="social-link inline-block relative"
+              >
+                <i class="fab fa-linkedin text-2xl"></i>
+                <span
+                  class="tooltip tooltip-right absolute top-1/2 transform -translate-y-1/2 opacity-0 bg-gray-300 py-2 px-4 ml-4 text-purple-600 rounded transition duration-300 ease-in-out"
+                >
+                  <i class="fab fa-linkedin mr-2"></i> Linkedin
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/yourprofile"
+                class="social-link inline-block relative"
+              >
+                <i class="fab fa-facebook text-2xl"></i>
+                <span
+                  class="tooltip tooltip-right absolute top-1/2 transform -translate-y-1/2 opacity-0 bg-gray-300 py-2 px-4 ml-4 text-purple-600 rounded transition duration-300 ease-in-out"
+                >
+                  <i class="fab fa-facebook mr-2"></i>Facebook
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <h2 class="text-4xl font-extrabold">HEY, I'M ISHTIAQ UDDIN</h2>
+          <p class="mt-4 text-xl">
+            A Dedicated Software Developer with expertise in building and
+            managing websites and web applications.
+          </p>
+          <div class="mt-8">
+            <button>
+              <a
+                href="#projects"
+                class="px-6 py-3 bg-purple-600 text-white rounded-xl hover:bg-purple-700"
+                >Project</a
+              >
+            </button>
+
+            <button>
+              <a
+                href="path/to/cv.pdf"
+                download
+                class="px-6 py-3 bg-purple-600 text-white rounded-xl hover:bg-purple-700"
+                >Download CV</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 bg-gray-800 text-white">
+      <div class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold text-center">
+          <span class="border-b-2 border-purple-500 inline-block pb-2 px-6"
+            >ABOUT ME</span
+          >
+        </h2>
+        <p class="mt-4 text-center text-gray-400 text-xl">
+          Here you will find more information about me, what I do, and my
+          current skills mostly in terms of programming and technology.
+        </p>
+        <div
+          class="mt-8 flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-12"
+        >
+          <div class="flex-1">
+            <h3 class="text-2xl font-semibold0">
+              <span
+                class="border-b-2 border-purple-500 inline-block pb-2 pl-2 pr-4"
+                >Get to know me!</span
+              >
+            </h3>
+            <p class="mt-4 text-gray-400">
+              I'm a
+              <span class="font-semibold">Software Developer</span> focused on
+              building and managing both the frontend and backend of websites
+              and web applications. Check out some of my work in the Projects
+              section.
+            </p>
+            <p class="mt-4 text-gray-400">
+              I work hard, I care about writing clean code, and I genuinely love
+              to learn. I’m currently looking for the right opportunity to work
+              in an environment that will help me progress into a complete
+              software developer role.
+            </p>
+            <h3 class="text-2xl font-semibold mt-8">
+              <span
+                class="border-b-2 border-purple-500 inline-block pb-2 pl-2 pr-4"
+                >Education</span
+              >
+            </h3>
+            <div class="mt-4 text-gray-400 ">
+              <p class="">
+                <strong>HSC (2019)</strong> <br />Chittagong Cantonment Public
+                College
+              </p>
+              <p class="mt-4">
+                <strong
+                  >BSc in Computer Science and Engineering (2021-2025)</strong
+                ><br />Rangamati Science and Technology University
+              </p>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl font-semibold">
+              <span
+                class="border-b-2 border-purple-500 inline-block pb-2 pl-2 pr-4"
+                >My Skills</span
+              >
+            </h3>
+            <div class="mt-4 flex flex-wrap gap-4 text-gray-400">
+              <!-- Skills -->
+              <span
+                class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+              >
+                <i class="fab fa-html5 mr-2"></i>HTML5</span
+              >
+              <span
+                class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+              >
+                <i class="fab fa-css3-alt mr-2"></i>CSS3</span
+              >
+              <span
+                class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+              >
+                <i class="fab fa-bootstrap mr-2"></i>Bootstrap</span
+              >
+              <span
+                class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+              >
+                <i class="fab fa-tailwind mr-2"></i>Tailwind CSS</span
+              >
+              <span
+                class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+              >
+                <i class="fab fa-js-square mr-2"></i>JavaScript (ES6)</span
+              >
+              <span
+                class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+              >
+                <i class="fab fa-react mr-2"></i>React.js</span
+              >
+
+              <span
+                class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+              >
+                <i class="fab fa-python mr-2"></i>Python</span
+              >
+
+              <span
+                class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+              >
+                <i class="fab fa-java mr-2"></i>Java</span
+              >
+              <span
+                class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+              >
+                <i class="fas fa-code mr-2"></i>C
+              </span>
+              <span
+                class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+              >
+                <i class="fas fa-code mr-2"></i>C++
+              </span>
+              <span
+                class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+              >
+                <i class="fas fa-database mr-2"></i>SQL</span
+              >
+              <span
+                class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+              >
+                <i class="fas fa-cogs mr-2"></i>OOP Concepts</span
+              >
+              <span
+                class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+              >
+                <i class="fas fa-chart-network mr-2"></i>DSA</span
+              >
+              <span
+                class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+              >
+                <i class="fab fa-python mr-2"></i>Django</span
+              >
+              <span
+                class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+              >
+                <i class="fab fa-python mr-2"></i>Django REST Framework</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-gray-900">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-8">
+          <span class="border-b-2 border-purple-500 inline-block pb-2 px-6"
+            >Projects</span
+          >
+        </h2>
+        <div class="grid grid-cols-1 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="mx-auto bg-gray-800 text-white rounded-xl shadow-md overflow-hidden container p-6"
+          >
+            <div class="flex">
+              <!-- Carousel -->
+              <div class="w-2/5">
+                <div class="carousel">
+                  <!-- Carousel items -->
+                  <!-- Replace the image URLs and links as per your requirement -->
+                  <div id="slide1" class="carousel-item relative w-full">
+                    <div class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"></div>
+                    <img src="images/img1.jpg" class="w-full rounded-2xl" />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a href="#slide4" class="btn btn-circle">❮</a>
+                      <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                  </div>
+                  <div id="slide2" class="carousel-item relative w-full">
+                    <div class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"></div>
+                    <img src="images/img2.jpg" class="w-full rounded-2xl" />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a href="#slide1" class="btn btn-circle">❮</a>
+                      <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                  </div>
+                  <div id="slide3" class="carousel-item relative w-full">
+                    <div class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"></div>
+                    <img src="images/img3.jpg" class="w-full rounded-2xl" />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a href="#slide2" class="btn btn-circle">❮</a>
+                      <a href="#slide4" class="btn btn-circle">❯</a>
+                    </div>
+                  </div>
+                  <div id="slide4" class="carousel-item relative w-full">
+                    <div class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"></div>
+                    <img src="images/img4.jpg" class="w-full rounded-2xl" />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a href="#slide3" class="btn btn-circle">❮</a>
+                      <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Carousel -->
+
+              <!-- Project Details -->
+              <div class="w-3/5 p-6">
+                <!-- Your project details here -->
+                <div
+                  class="uppercase tracking-wide text-xl text-purple-300 font-semibold "
+                >
+                  Find YourApartment
+                </div>
+                <p class="mt-2 text-gray-300">
+                  Full-stack development project for the FindYourApartment
+                  website, providing comprehensive user registration,
+                  authentication, and apartment management features. The backend
+                  is built with Django and Django REST Framework, while the
+                  frontend is crafted using React, React Router, Tailwind CSS,
+                  and Daisy UI.
+                </p>
+                <!-- Links -->
+                <div class="mt-4 flex items-center gap-2">
+                  <a
+                    href="https://github.com/username/project"
+                    class="text-purple-400 hover:text-purple-600 flex items-center"
+                  >
+                    <i class="fab fa-github mr-1"></i>
+                    GitHub(Frontend)
+                  </a>
+                  <a
+                    href="https://github.com/username/project"
+                    class="text-purple-400 hover:text-purple-600 flex items-center"
+                  >
+                    <i class="fab fa-github mr-1"></i>
+                    GitHub(Backend)
+                  </a>
+                  <a
+                    href="https://findyourapartmemt.netlify.app/"
+                    class="ml-4 text-purple-400 hover:text-purple-600 flex items-center"
+                  >
+                    <i class="fas fa-eye mr-1"></i>
+                    Live Preview
+                  </a>
+                </div>
+                <!-- Tags -->
+                <div class="mt-4 flex flex-wrap gap-4 text-gray-400">
+                  <span
+                    class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl  hover:bg-purple-600 hover:text-white "
+                    >Django</span
+                  >
+                  <span
+                    class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                    >Django REST Framework</span
+                  >
+                  <span
+                    class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                    >PostgreSQL</span
+                  >
+                  <span
+                    class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                    >React</span
+                  >
+                  <span
+                    class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                    >React Router</span
+                  >
+                  <span
+                    class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                    >Tailwind CSS</span
+                  >
+                  <span
+                    class="inline-flex border-2 items-center px-4 py-2 bg-gray-800  rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                    >Daisy UI</span
+                  >
+                </div>
+              </div>
+              <!-- End Project Details -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget" class="fixed bottom-4 right-4">
+      <button
+        id="chat-button"
+        class="bg-purple-500 text-white p-4 rounded-xl shadow-lg hover:bg-purple-700"
+      >
+        Chat with me 👋
+      </button>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-800 text-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">
+          <span class="border-b-2 border-purple-500 inline-block pb-2 px-6"
+            >Contact With Me</span
+          >
+        </h2>
+        <p class="text-center mb-12 text-xl text-gray-400">
+          If you have any questions or inquiries, please feel free to reach out
+          to me using the form below. I'll get back to you as soon as possible.
+        </p>
+        <div class="mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div
+              class="p-12 m-2 bg-gray-900 text-xl flex flex-col justify-center rounded-xl"
+            >
+              <p class="text-gray-300 mb-4">
+                <strong>Email:</strong>
+                <a href="mailto:ishtiaquddin119@gmail.com" class="underline"
+                  >ishtiaquddin119@gmail.com</a
+                >
+              </p>
+              <p class="text-gray-300 mb-4">
+                <strong>Phone:</strong>
+                <a href="tel:01843336009" class="underline">01843336009</a>
+              </p>
+              <p class="text-gray-300 mb-8">
+                <strong>Address:</strong>
+                Fatikchhari, Chittagong, Bangladesh
+              </p>
+              <div class="flex space-x-4 text-2xl">
+                <a
+                  href="https://www.linkedin.com/in/yourprofile"
+                  class="text-gray-300 hover:text-purple-600"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/yourprofile"
+                  class="text-gray-300 hover:text-purple-600"
+                >
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </div>
+              <div class="flex mt-8">
+                <button class="text-sm">
+                  <a
+                    href="path/to/your/cv.pdf"
+                    download
+                    class="bg-purple-600 text-white px-6 py-3 rounded-xl hover:bg-purple-700"
+                  >
+                    Download CV
+                  </a>
+                </button>
+              </div>
+            </div>
+            <form class="p-12 m-2 bg-gray-900 rounded-xl">
+              <div class="mb-4">
+                <label for="name" class="block text-gray-100 font-semibold mb-2"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input w-full px-4 bg-gray-700 border border-gray-700 py-2  rounded-md focus:outline-none focus:border-white text-black"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  for="email"
+                  class="block text-gray-100 font-semibold mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input w-full px-4 bg-gray-700 border border-gray-700 py-2  rounded-md focus:outline-none focus:border-white text-black"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div class="mb-8">
+                <label
+                  for="message"
+                  class="block text-gray-100 font-semibold mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="form-input w-full px-4 bg-gray-700 border border-gray-700 py-2  rounded-md focus:outline-none focus:border-white text-black"
+                  placeholder="Enter your message"
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button
+                  type="submit"
+                  class="bg-purple-600 text-white px-6 py-3 rounded-xl hover:bg-purple-700 transition duration-300 ease-in-out"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-gray-900 text-white">
+      <div class="container mx-auto flex flex-col justify-center items-center">
+        <div>
+          <p class="text-gray-600">
+            &copy; 2024 Ishtiaq Uddin. All rights reserved.
+          </p>
+        </div>
+        <div>
+          <ul class="flex space-x-4 text-xl">
+            <li>
+              <a href="#" class="text-gray-400 hover:text-purple-600"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 hover:text-purple-600"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("nav ul li a");
+
+        function setActiveLink() {
+          const currentLocation = window.location.href;
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.href === currentLocation) {
+              link.classList.add("active");
+            }
+          });
+        }
+
+        setActiveLink(); // Set active link on initial page load
+
+        // Listen for changes to the URL
+        window.addEventListener("popstate", setActiveLink);
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize Slick Carousel
+        $(".carousel").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          arrows: false,
+          dots: true,
+          adaptiveHeight: true,
+        });
+      });
+    </script>
+  </body>
+</html>
