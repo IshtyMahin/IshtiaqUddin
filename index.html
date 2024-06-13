@@ -66,17 +66,17 @@
   </head>
   <body class="bg-gray-900 text-white">
     <!-- Header Section -->
-    <header class="fixed z-10 w-full bg-black bg-opacity-30 shadow">
+    <header class="md:fixed z-10  w-full bg-black bg-opacity-30 shadow">
       <div
         class="container mx-auto flex justify-between items-center px-4 py-4"
       >
         <div class="flex items-center">
           <img
-            class="w-16 h-16 p-2 rounded-full"
+            class="w-12 md:w-16 h-12 md:h-16 p-2 rounded-full"
             src="images/myprofile.jpg"
             alt="Profile Picture"
           />
-          <h1 class="text-xl font-bold ml-4">ISHTIAQ UDDIN</h1>
+          <h1 class="md:text-xl font-bold ml-2 md:ml-4">ISHTIAQ UDDIN</h1>
         </div>
         <nav class="hidden md:block">
           <ul class="flex space-x-6">
@@ -97,6 +97,12 @@
         <div class="block md:hidden">
           <button id="menu-btn" class="text-gray-300 focus:outline-none">
             <i class="fas fa-bars text-2xl"></i>
+          </button>
+          <button
+            id="close-btn"
+            class="text-gray-300 focus:outline-none hidden"
+          >
+            <i class="fas fa-times text-2xl"></i>
           </button>
         </div>
       </div>
@@ -206,7 +212,7 @@
           </ul>
         </div>
         <div class="flex-1 mt-8 md:mt-0">
-          <h2 class="text-4xl md:text-5xl font-extrabold text-white">
+          <h2 class="text-3xl md:text-5xl font-extrabold text-white">
             HEY, I'M ISHTIAQ UDDIN
           </h2>
           <p class="mt-4 text-xl md:text-2xl text-gray-400">
@@ -709,14 +715,12 @@
     </footer>
 
     <script>
-      document.getElementById("menu-btn").addEventListener("click", () => {
-        document.getElementById("mobile-menu").classList.toggle("hidden");
-      });
-    </script>
-
-    <script>
       document.addEventListener("DOMContentLoaded", function () {
         const navLinks = document.querySelectorAll("nav ul li a");
+        const sections = document.querySelectorAll("section");
+        const menuBtn = document.getElementById("menu-btn");
+        const closeBtn = document.getElementById("close-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
 
         function setActiveLink() {
           const currentLocation = window.location.href;
@@ -728,33 +732,47 @@
           });
         }
 
-        setActiveLink();
-
-        window.addEventListener("popstate", setActiveLink);
-      });
-    </script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll("nav ul li a");
-        const sections = document.querySelectorAll("section");
-
-        function setActiveLink() {
+        function setActiveLinkOnScroll() {
           let index = sections.length;
-
           while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
 
           navLinks.forEach((link) => link.classList.remove("active"));
           navLinks[index].classList.add("active");
         }
 
-        setActiveLink(); // Set active link on initial page load
+        // Toggle mobile menu visibility
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+          menuBtn.classList.toggle("hidden");
+          closeBtn.classList.toggle("hidden");
+        });
 
-        window.addEventListener("scroll", setActiveLink);
+        closeBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+          menuBtn.classList.toggle("hidden");
+          closeBtn.classList.toggle("hidden");
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            if (!mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+              menuBtn.classList.remove("hidden");
+              closeBtn.classList.add("hidden");
+            }
+          });
+        });
+
+        setActiveLink(); // Set active link on initial page load
+        setActiveLinkOnScroll(); // Set active link on initial page load
+
+        window.addEventListener("popstate", setActiveLink);
+        window.addEventListener("scroll", setActiveLinkOnScroll);
       });
-    </script>
-    <script>
+
+      // Initialize carousel
       document.addEventListener("DOMContentLoaded", function () {
-        // Initialize Slick Carousel
         $(".carousel").slick({
           slidesToShow: 1,
           slidesToScroll: 1,
