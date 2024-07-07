@@ -66,7 +66,7 @@
   </head>
   <body class="bg-gray-900 text-white">
     <!-- Header Section -->
-    <header class="md:fixed z-10  w-full bg-black bg-opacity-30 shadow">
+    <header class="md:fixed z-10 w-full bg-black bg-opacity-30 shadow">
       <div
         class="container mx-auto flex justify-between items-center px-4 py-4"
       >
@@ -398,17 +398,20 @@
           <div
             class="mx-auto bg-gray-800 text-white rounded-xl shadow-md overflow-hidden container p-6"
           >
-            <div class="md:flex">
+            <div class="md:flex h-full">
               <!-- Carousel -->
-              <div class="md:w-2/5">
-                <div class="carousel">
+              <div class="md:w-2/5 flex items-stretch">
+                <div class="carousel flex-1">
                   <!-- Carousel items -->
                   <!-- Replace the image URLs and links as per your requirement -->
                   <div id="slide1" class="carousel-item relative w-full">
                     <div
                       class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
                     ></div>
-                    <img src="images/img1.jpg" class="w-full rounded-2xl" />
+                    <img
+                      src="images/img1.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
                     <div
                       class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
                     >
@@ -428,7 +431,10 @@
                     <div
                       class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
                     ></div>
-                    <img src="images/img2.jpg" class="w-full rounded-2xl" />
+                    <img
+                      src="images/img2.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
                     <div
                       class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
                     >
@@ -448,7 +454,10 @@
                     <div
                       class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
                     ></div>
-                    <img src="images/img3.jpg" class="w-full rounded-2xl" />
+                    <img
+                      src="images/img3.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
                     <div
                       class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
                     >
@@ -468,7 +477,10 @@
                     <div
                       class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
                     ></div>
-                    <img src="images/img4.jpg" class="w-full rounded-2xl" />
+                    <img
+                      src="images/img4.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
                     <div
                       class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
                     >
@@ -489,75 +501,641 @@
               <!-- End Carousel -->
 
               <!-- Project Details -->
-              <div class="md:w-3/5 p-6">
-                <!-- Your project details here -->
-                <div
-                  class="tracking-wide text-2xl text-purple-400 font-semibold"
-                >
-                  <h2>Find YourApartment</h2>
+              <div class="md:w-3/5 p-6 flex-1 flex items-stretch">
+                <div class="flex-1">
+                  <!-- Your project details here -->
+                  <div
+                    class="tracking-wide text-2xl text-purple-400 font-semibold"
+                  >
+                    <h2>Find Your Apartment</h2>
+                  </div>
+                  <p class="mt-2 text-gray-300">
+                    Full-stack development project for the FindYourApartment
+                    website, providing comprehensive user registration,
+                    authentication, and apartment management features. The
+                    backend is built with Django and Django REST Framework,
+                    while the frontend is crafted using React, React Router,
+                    Tailwind CSS, and Daisy UI.
+                  </p>
+                  <!-- Links -->
+                  <div
+                    class="mt-4 flex items-center gap-2 item-center flex-wrap"
+                  >
+                    <a
+                      href="https://github.com/username/project"
+                      class="text-purple-400 hover:text-purple-600 flex items-center"
+                    >
+                      <i class="fab fa-github mr-1"></i>
+                      GitHub(Frontend)
+                    </a>
+                    <a
+                      href="https://github.com/username/project"
+                      class="text-purple-400 hover:text-purple-600 flex items-center"
+                    >
+                      <i class="fab fa-github mr-1"></i>
+                      GitHub(Backend)
+                    </a>
+                    <a
+                      href="https://findyourapartmemt.netlify.app/"
+                      class="ml-4 text-purple-400 hover:text-purple-600 flex items-center"
+                    >
+                      <i class="fas fa-eye mr-1"></i>
+                      Live Preview
+                    </a>
+                  </div>
+                  <!-- Tags -->
+                  <div class="mt-4 flex flex-wrap gap-4 text-gray-400">
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl hover:bg-purple-600 hover:text-white"
+                      >Django</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >Django REST Framework</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >PostgreSQL</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >React</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >React Router</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >Tailwind CSS</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >Daisy UI</span
+                    >
+                  </div>
                 </div>
-                <p class="mt-2 text-gray-300">
-                  Full-stack development project for the FindYourApartment
-                  website, providing comprehensive user registration,
-                  authentication, and apartment management features. The backend
-                  is built with Django and Django REST Framework, while the
-                  frontend is crafted using React, React Router, Tailwind CSS,
-                  and Daisy UI.
-                </p>
-                <!-- Links -->
-                <div class="mt-4 flex items-center gap-2 item-center flex-wrap">
-                  <a
-                    href="https://github.com/username/project"
-                    class="text-purple-400 hover:text-purple-600 flex items-center"
-                  >
-                    <i class="fab fa-github mr-1"></i>
-                    GitHub(Frontend)
-                  </a>
-                  <a
-                    href="https://github.com/username/project"
-                    class="text-purple-400 hover:text-purple-600 flex items-center"
-                  >
-                    <i class="fab fa-github mr-1"></i>
-                    GitHub(Backend)
-                  </a>
-                  <a
-                    href="https://findyourapartmemt.netlify.app/"
-                    class="ml-4 text-purple-400 hover:text-purple-600 flex items-center"
-                  >
-                    <i class="fas fa-eye mr-1"></i>
-                    Live Preview
-                  </a>
+              </div>
+              <!-- End Project Details -->
+            </div>
+          </div>
+          <!-- project 2 -->
+          <div
+            class="mx-auto bg-gray-800 text-white rounded-xl shadow-md overflow-hidden container p-6"
+          >
+            <div class="md:flex h-full">
+              <!-- Carousel -->
+              <div class="md:w-2/5 flex items-stretch">
+                <div class="carousel flex-1">
+                  <!-- Carousel items -->
+                  <!-- Replace the image URLs and links as per your requirement -->
+                  <div id="news_slide1" class="carousel-item relative w-full">
+                    <div
+                      class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
+                    ></div>
+                    <img
+                      src="images/news_site/img1.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a
+                        href="#news_slide6"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❮</a
+                      >
+                      <a
+                        href="#news_slide2"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❯</a
+                      >
+                    </div>
+                  </div>
+                  <div id="news_slide2" class="carousel-item relative w-full">
+                    <div
+                      class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
+                    ></div>
+                    <img
+                      src="images/news_site/img2.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a
+                        href="#news_slide1"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❮</a
+                      >
+                      <a
+                        href="#news_slide3"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❯</a
+                      >
+                    </div>
+                  </div>
+                  <div id="news_slide3" class="carousel-item relative w-full">
+                    <div
+                      class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
+                    ></div>
+                    <img
+                      src="images/news_site/img3.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a
+                        href="#news_slide2"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❮</a
+                      >
+                      <a
+                        href="#news_slide4"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❯</a
+                      >
+                    </div>
+                  </div>
+                  <div id="news_slide4" class="carousel-item relative w-full">
+                    <div
+                      class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
+                    ></div>
+                    <img
+                      src="images/news_site/img4.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a
+                        href="#news_slide3"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❮</a
+                      >
+                      <a
+                        href="#news_slide5"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❯</a
+                      >
+                    </div>
+                  </div>
+                  <div id="news_slide5" class="carousel-item relative w-full">
+                    <div
+                      class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
+                    ></div>
+                    <img
+                      src="images/news_site/img5.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a
+                        href="#news_slide4"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❮</a
+                      >
+                      <a
+                        href="#news_slide6"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❯</a
+                      >
+                    </div>
+                  </div>
+                  <div id="news_slide6" class="carousel-item relative w-full">
+                    <div
+                      class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
+                    ></div>
+                    <img
+                      src="images/news_site/img6.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a
+                        href="#news_slide5"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❮</a
+                      >
+                      <a
+                        href="#news_slide1"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❯</a
+                      >
+                    </div>
+                  </div>
                 </div>
-                <!-- Tags -->
-                <div class="mt-4 flex flex-wrap gap-4 text-gray-400">
-                  <span
-                    class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl hover:bg-purple-600 hover:text-white"
-                    >Django</span
+              </div>
+              <!-- End Carousel -->
+
+              <!-- Project Details -->
+              <div class="md:w-3/5 p-6 flex-1 flex items-stretch">
+                <div class="flex-1">
+                  <!-- Your project details here -->
+                  <div
+                    class="tracking-wide text-2xl text-purple-400 font-semibold"
                   >
-                  <span
-                    class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
-                    >Django REST Framework</span
+                    <h2>Somoy Sondhan</h2>
+                  </div>
+                  <p class="mt-2 text-gray-300">
+                    Full-stack development project for the SomoySondhan website,
+                    providing comprehensive user registration, authentication,
+                    and news management features. The backend is built with
+                    Django and Django REST Framework, while the frontend is
+                    crafted using HTML5,CSS3,JavaScript,Tailwind CSS, and Daisy
+                    UI.
+                  </p>
+                  <!-- Links -->
+                  <div
+                    class="mt-4 flex items-center gap-2 item-center flex-wrap"
                   >
-                  <span
-                    class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
-                    >PostgreSQL</span
+                    <a
+                      href="https://github.com/IshtyMahin/SomoySondhan"
+                      class="text-purple-400 hover:text-purple-600 flex items-center"
+                    >
+                      <i class="fab fa-github mr-1"></i>
+                      GitHub(Frontend)
+                    </a>
+                    <a
+                      href="https://github.com/IshtyMahin/SomoySondhan"
+                      class="text-purple-400 hover:text-purple-600 flex items-center"
+                    >
+                      <i class="fab fa-github mr-1"></i>
+                      GitHub(Backend)
+                    </a>
+                    <a
+                      href="https://somoysondhan.netlify.app/"
+                      class="ml-4 text-purple-400 hover:text-purple-600 flex items-center"
+                    >
+                      <i class="fas fa-eye mr-1"></i>
+                      Live Preview
+                    </a>
+                  </div>
+                  <!-- Tags -->
+                  <div class="mt-4 flex flex-wrap gap-4 text-gray-400">
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl hover:bg-purple-600 hover:text-white"
+                      >Django</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >Django REST Framework</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >SQLite</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >HTML5</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >CSS3</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >JavaScript</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >Tailwind CSS</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >Daisy UI</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- End Project Details -->
+            </div>
+          </div>
+           <!-- project 3 -->
+          <div
+            class="mx-auto bg-gray-800 text-white rounded-xl shadow-md overflow-hidden container p-6"
+          >
+            <div class="md:flex h-full">
+              <!-- Carousel -->
+              <div class="md:w-2/5 flex items-stretch">
+                <div class="carousel flex-1">
+                  <!-- Carousel items -->
+                  <!-- Replace the image URLs and links as per your requirement -->
+                  <div id="quiz_slide1" class="carousel-item relative w-full">
+                    <div
+                      class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
+                    ></div>
+                    <img
+                      src="images/quiz_site/img1.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a
+                        href="#quiz_slide10"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❮</a
+                      >
+                      <a
+                        href="#quiz_slide2"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❯</a
+                      >
+                    </div>
+                  </div>
+                  <div id="quiz_slide2" class="carousel-item relative w-full">
+                    <div
+                      class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
+                    ></div>
+                    <img
+                      src="images/quiz_site/img2.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a
+                        href="#quiz_slide1"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❮</a
+                      >
+                      <a
+                        href="#quiz_slide3"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❯</a
+                      >
+                    </div>
+                  </div>
+                  <div id="quiz_slide3" class="carousel-item relative w-full">
+                    <div
+                      class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
+                    ></div>
+                    <img
+                      src="images/quiz_site/img3.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a
+                        href="#quiz_slide2"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❮</a
+                      >
+                      <a
+                        href="#quiz_slide4"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❯</a
+                      >
+                    </div>
+                  </div>
+                  <div id="quiz_slide4" class="carousel-item relative w-full">
+                    <div
+                      class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
+                    ></div>
+                    <img
+                      src="images/quiz_site/img4.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a
+                        href="#quiz_slide3"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❮</a
+                      >
+                      <a
+                        href="#quiz_slide5"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❯</a
+                      >
+                    </div>
+                  </div>
+                  <div id="quiz_slide5" class="carousel-item relative w-full">
+                    <div
+                      class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
+                    ></div>
+                    <img
+                      src="images/quiz_site/img5.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a
+                        href="#quiz_slide4"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❮</a
+                      >
+                      <a
+                        href="#quiz_slide6"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❯</a
+                      >
+                    </div>
+                  </div>
+                  <div id="quiz_slide6" class="carousel-item relative w-full">
+                    <div
+                      class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
+                    ></div>
+                    <img
+                      src="images/quiz_site/img6.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a
+                        href="#quiz_slide5"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❮</a
+                      >
+                      <a
+                        href="#quiz_slide7"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❯</a
+                      >
+                    </div>
+                  </div>
+                  <div id="quiz_slide7" class="carousel-item relative w-full">
+                    <div
+                      class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
+                    ></div>
+                    <img
+                      src="images/quiz_site/img7.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a
+                        href="#quiz_slide6"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❮</a
+                      >
+                      <a
+                        href="#quiz_slide8"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❯</a
+                      >
+                    </div>
+                  </div>
+                  <div id="quiz_slide8" class="carousel-item relative w-full">
+                    <div
+                      class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
+                    ></div>
+                    <img
+                      src="images/quiz_site/img8.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a
+                        href="#quiz_slide7"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❮</a
+                      >
+                      <a
+                        href="#quiz_slide9"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❯</a
+                      >
+                    </div>
+                  </div>
+                  <div id="quiz_slide9" class="carousel-item relative w-full">
+                    <div
+                      class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
+                    ></div>
+                    <img
+                      src="images/quiz_site/img9.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a
+                        href="#quiz_slide8"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❮</a
+                      >
+                      <a
+                        href="#quiz_slide10"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❯</a
+                      >
+                    </div>
+                  </div>
+                  <div id="quiz_slide10" class="carousel-item relative w-full">
+                    <div
+                      class="overlay absolute inset-0 bg-black opacity-50 rounded-2xl"
+                    ></div>
+                    <img
+                      src="images/quiz_site/img10.jpg"
+                      class="w-full h-full object-contain rounded-2xl"
+                    />
+                    <div
+                      class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+                    >
+                      <a
+                        href="#quiz_slide9"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❮</a
+                      >
+                      <a
+                        href="#quiz_slide1"
+                        class="btn btn-circle bg-purple-500 hover:bg-purple-600 border-0 text-white"
+                        >❯</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Carousel -->
+
+              <!-- Project Details -->
+              <div class="md:w-3/5 p-6 flex-1 flex items-stretch">
+                <div class="flex-1">
+                  <!-- Your project details here -->
+                  <div
+                    class="tracking-wide text-2xl text-purple-400 font-semibold"
                   >
-                  <span
-                    class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
-                    >React</span
+                    <h2>Mindd-Test</h2>
+                  </div>
+                  <p class="mt-2 text-gray-300">
+                    Full-stack development project for the quiz website,
+                    providing comprehensive user registration, authentication,
+                    and quiz management features. The backend is built with
+                    Django and Django REST Framework, while the frontend is
+                    crafted using HTML5,CSS3,JavaScript,Tailwind CSS, and Daisy
+                    UI.
+                  </p>
+                  <!-- Links -->
+                  <div
+                    class="mt-4 flex items-center gap-2 item-center flex-wrap"
                   >
-                  <span
-                    class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
-                    >React Router</span
-                  >
-                  <span
-                    class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
-                    >Tailwind CSS</span
-                  >
-                  <span
-                    class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
-                    >Daisy UI</span
-                  >
+                    <a
+                      href="https://github.com/IshtyMahin/MindTest"
+                      class="text-purple-400 hover:text-purple-600 flex items-center"
+                    >
+                      <i class="fab fa-github mr-1"></i>
+                      GitHub(Frontend)
+                    </a>
+                    <a
+                      href="https://github.com/IshtyMahin/Quiz_zone"
+                      class="text-purple-400 hover:text-purple-600 flex items-center"
+                    >
+                      <i class="fab fa-github mr-1"></i>
+                      GitHub(Backend)
+                    </a>
+                    <a
+                      href="https://mindd-test.netlify.app/create_quiz"
+                      class="ml-4 text-purple-400 hover:text-purple-600 flex items-center"
+                    >
+                      <i class="fas fa-eye mr-1"></i>
+                      Live Preview
+                    </a>
+                  </div>
+                  <!-- Tags -->
+                  <div class="mt-4 flex flex-wrap gap-4 text-gray-400">
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl hover:bg-purple-600 hover:text-white"
+                      >Django</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >Django REST Framework</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >SQLite</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >HTML5</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >CSS3</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >JavaScript</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >Tailwind CSS</span
+                    >
+                    <span
+                      class="inline-flex border-2 items-center px-4 py-2 bg-gray-800 rounded-xl text-base hover:bg-purple-600 hover:text-white"
+                      >Daisy UI</span
+                    >
+                  </div>
                 </div>
               </div>
               <!-- End Project Details -->
